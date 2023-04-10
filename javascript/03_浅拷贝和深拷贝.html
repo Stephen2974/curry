@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            浅拷贝：
+                -通常对对象的拷贝都是浅拷贝
+                -只是对对象的浅层进行复制(只复制第一层)
+                -如果对象中存储的数据是原始值，则拷贝的深浅不重要
+                -浅拷贝只会对对象本身进行复制，不会复制对象中的属性(或元素)
+            深拷贝：
+                -不仅复制对象本身，还要复制对象中的元素和属性
+                -因为性能问题，通常情况下不会使用深拷贝
+        */
+        const arr = [{name:"curry"},{name:"klay"}]
+        const arr3 = arr.slice()
+        console.log(arr === arr3)
+        console.log(arr[0] === arr3[0])
+        const arr2 = structuredClone(arr)
+        console.log(arr);
+        console.log(arr3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

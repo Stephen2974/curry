@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            一个函数也可以作为参数
+                - 这个函数被称为回调函数(callback)
+        */
+        class Person {
+            constructor(name,age){
+                this.name = name
+                this.age = age
+            }
+        }
+        const Newperson = [
+            new Person("curry",18),
+            new Person("klay",19),
+            new Person("green",20),
+            new Person("looney",21)
+        ]
+        function filter (arr,cb) {
+            const newArr = []
+            console.log(cb);
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i].age < 19){
+                    newArr.push(arr[i])
+                }
+            }
+            return newArr
+        }
+        function fn(){
+            return true
+        }
+        result = filter(Newperson,()=>{alert(111111)})
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
